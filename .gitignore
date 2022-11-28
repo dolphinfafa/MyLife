@@ -1,0 +1,14 @@
+# python
+*.pyc
+
+*.swp
+
+# database
+*.sqlite3
+migrations
+
+#vs code
+.vscode
+
+#qiniu
+*.qiniu_pythonsdk_hostscache.json
