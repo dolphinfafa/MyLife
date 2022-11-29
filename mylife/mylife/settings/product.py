@@ -13,9 +13,9 @@ DATABASES = {
 }
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/root/MyLife/mylife/static',
+    os.path.join(BASE_DIR, "static")
 ]
+STATIC_URL = '/static/'
 
 ADMINS = MANAGERS = (
     ('jay', 'leafleaving@gmail.com'),
@@ -30,37 +30,37 @@ ADMINS = MANAGERS = (
 
 # STATIC_ROOT = '/root/...'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'default': {
-            'format': '%(levelname)s %(asctime)s %(module)s:'
-                    '%(funcName)s: %(lineno)d %(message)s'
-        },
-    },
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'default': {
+#             'format': '%(levelname)s %(asctime)s %(module)s:'
+#                     '%(funcName)s: %(lineno)d %(message)s'
+#         },
+#     },
     
-    'handlers': {
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'default',
-        },
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/tmp/logs/typeidea.log',
-            'formatter': 'default',
-            'maxBytes': 1024*1024, #1M
-            'backupCount': 5,
-        },
-    },
+#     'handlers': {
+#         'console': {
+#             'level': 'INFO',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'default',
+#         },
+#         'file': {
+#             'level': 'INFO',
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': '/tmp/logs/typeidea.log',
+#             'formatter': 'default',
+#             'maxBytes': 1024*1024, #1M
+#             'backupCount': 5,
+#         },
+#     },
     
-    'loggers': {
-        '': {
-            'handlers': ['console'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-    },
-}
+#     'loggers': {
+#         '': {
+#             'handlers': ['console'],
+#             'level': 'INFO',
+#             'propagate': True,
+#         },
+#     },
+# }
