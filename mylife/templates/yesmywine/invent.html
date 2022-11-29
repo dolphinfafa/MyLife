@@ -1,0 +1,48 @@
+# ./polls/templates/polls/upload.html
+
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>uploadFile</title>
+
+</head>
+
+<body>
+
+    <form method="post" action="" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+       <label> 上传'单品'文件 </label>
+
+       <input type="file" name="danpin" />
+
+       <br/>
+
+       <label> 上传'款号'文件 </label>
+
+       <input type="file" name="kuanhao" />
+
+       <br/>
+
+       <label> 上传'库存'文件 </label>
+
+       <input type="file" name="kucun" />
+
+       <br/>
+
+       <button type="submit" name="baishazhou">武汉总仓</button>
+       <button type="submit" name="wansongyuan">万松园店</button>
+       <button type="submit" name="ezhou">鄂州店</button>
+       <button type="submit" name="fuxin">富鑫店</button>
+       <button type="submit" name="sifang">肆方店</button>
+       <button type="submit" name="binjiang">滨江店</button>
+
+    </form>
+
+</body>
+
+</html>
