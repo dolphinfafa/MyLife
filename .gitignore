@@ -12,3 +12,6 @@ migrations
 
 #qiniu
 *.qiniu_pythonsdk_hostscache.json
+
+# DS store
+*.DS_Store
