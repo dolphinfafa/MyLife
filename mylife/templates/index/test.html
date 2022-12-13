@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    </head>
+
+    <body>
+        用户名：<input type="text" id="username"></input>
+        密码：<input type="password" id="password"></input>
+        {% csrf_token %}
+        <button id="submit">提交</button>
+
+<script>
+    $("#submit").click(function () {
+        $.ajax({
+            url: "/ajax_login_data/", //后端请求地址
+            type: "POST", //请求方式
+            data: {//请求参数
+                username: $("#username").val(),
+                password: $("#password").val(),
+                "csrfmiddlewaretoken": $("[name = 'csrfmiddlewaretoken']").val()
+            },
+            //请求成功后操作
+            success: function (data) {
+                console.log(data)
+                alert(data.msg)
+            },
+            //请求失败后操作
+            error: function (jqXHR, textStatus, err) {
+                console.log(arguments);
+            },
+        })
+    })
+</script>       
+
+
+    </body>
+</html>

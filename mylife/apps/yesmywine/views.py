@@ -76,9 +76,6 @@ class InventView(View):
                 name = 'sifang'
             elif name == binjiang:
                 name = 'binjiang'
-            
-            s = f'attachment; filename={name}.xlsx'
-            print(s)
 
             response['Content-Disposition'] = f'attachment; filename={name}.xlsx'
             return response
