@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抽奖池</title>
+</head>
+<body>
+
+  <!-- 渲染标签 -->
+  <div id="container"></div>
+
+  <!-- 动画组件 -->
+  <script src="{% static 'meeting/lib/animation-plug/three.min.js' %}" ></script>
+  <script src="{% static 'meeting/lib/animation-plug/tween.min.js' %}" ></script>
+  <script src="{% static 'meeting/lib/animation-plug/TrackballControls.js' %}" ></script>
+  <script src="{% static 'meeting/lib/animation-plug/CSS3DRenderer.js' %}" ></script>
+  <script src="{% static 'meeting/js/lucky-draw-animation.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'meeting/css/lucky-draw-animation.css' %}">
+
+
+  <!-- Vue -->
+  <script src="{% static 'meeting/lib/vue.min.js' %}"></script>
+
+  <!-- antd -->
+  <script src="{% static 'meeting/lib/ant-design-vue/dist/antd.js' %}"></script>
+  <link href="{% static 'meeting/lib/ant-design-vue/dist/antd.css' %}" rel="stylesheet"/>
+
+  <!-- exdownload -->
+  <script src="{% static 'meeting/lib/exdownload.js' %}"></script>
+
+  <!-- 公用 JS -->
+  <script src="{% static 'meeting/js/public.js' %}"></script>
+
+  <!-- Vue 渲染组件 -->
+  <div id="app"></div>
+
+  <!-- Vue UI -->
+  <script src="{% static 'meeting/js/lucky-draw.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'meeting/css/lucky-draw.css' %}">
+</body>
+</html>

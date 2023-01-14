@@ -81,3 +81,11 @@ class InventView(View):
             return response
         except Exception as e:
             return HttpResponse(e)
+
+class MeetingView(View):
+    def get(self, request):
+        return render(request, 'yesmywine/index.html')
+
+class DrawView(View):
+    def get(self, request):
+        return render(request, 'yesmywine/lucky-draw.html')
