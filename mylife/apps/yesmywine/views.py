@@ -29,7 +29,7 @@ class InventView(View):
             baishazhou = '武汉总仓'
             wansongyuan = '经济万松园店'
             ezhou = '仓储鄂州阳光货仓店'
-            fuxin = '仓储富鑫常青店'
+            baoli = '保利江锦店'
             sifang = '仓储肆方光谷店'
             binjiang = '仓储滨江国际店'
 
@@ -39,8 +39,8 @@ class InventView(View):
                 name = wansongyuan
             elif 'ezhou' in request.POST:
                 name = ezhou
-            elif 'fuxin' in request.POST:
-                name = fuxin
+            elif 'baoli' in request.POST:
+                name = baoli
             elif 'sifang' in request.POST:
                 name = sifang
             elif 'binjiang' in request.POST:
@@ -70,8 +70,8 @@ class InventView(View):
                 name = 'wansongyuan'
             elif name == ezhou:
                 name = 'ezhou'
-            elif name == fuxin:
-                name = 'fuxin'
+            elif name == baoli:
+                name = 'baoli'
             elif name == sifang:
                 name = 'sifang'
             elif name == binjiang:
